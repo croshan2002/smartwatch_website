@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import Day from './components/Day'
 import Features from './components/Features'
 import Studio from './components/Studio'
+import Faq from './components/Faq'
 import Buy from './components/Buy'
 import { CASES, STRAPS, scene } from './lib/store'
 import { initSmoothScroll, ScrollTrigger } from './lib/smooth'
@@ -69,6 +70,7 @@ export default function App() {
           face={studioFace}
           setFace={setStudioFace}
         />
+        <Faq />
         <Buy caseFinish={caseFinish} strap={strap} />
       </main>
     </>

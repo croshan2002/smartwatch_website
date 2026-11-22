@@ -6,6 +6,7 @@ const LINKS = [
   ['day', 'Your day'],
   ['features', 'Features'],
   ['studio', 'Studio'],
+  ['faq', 'FAQ'],
 ]
 
 export default function Nav() {

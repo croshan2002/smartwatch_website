@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 
-const SIZES = [
-  { id: '41', label: '41 mm', price: 44900 },
-  { id: '45', label: '45 mm', price: 49900 },
-]
+import { SIZES } from '../content/site'
+
 const inr = (n) => '₹' + n.toLocaleString('en-IN')
 
 export default function Buy({ caseFinish, strap }) {

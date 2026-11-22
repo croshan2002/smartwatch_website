@@ -17,6 +17,7 @@ export default function Hero() {
           PULSE Watch S · Titanium
         </motion.p>
         <h1 className="display">
+          <span className="sr-only">PULSE Watch S titanium smartwatch: </span>
           {WORDS.map((w, i) => (
             <motion.span
               key={w}

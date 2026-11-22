@@ -33,3 +33,22 @@ Open the URL Vite prints (usually http://localhost:5173). Build with `npm run bu
 - Finishes, bands, faces: `src/lib/store.js`
 - Watch faces (drawn with canvas 2D): `src/three/faces.js`
 - Model + poses: `src/three/Watch.jsx`
+
+## SEO, AEO and GEO
+
+All product facts (specs, prices, FAQ) live in `src/content/site.js`. On `npm run build`, `vite.config.js` uses them to generate:
+
+- Title, description, canonical, Open Graph and Twitter tags
+- JSON-LD schema: Product (with prices), FAQPage, WebSite, Brand
+- A plain-HTML copy of the facts and FAQ inside `#root`, so crawlers and AI bots that don't run JavaScript can read the page
+- `robots.txt` (search engines and AI crawlers allowed), `sitemap.xml` and `llms.txt`
+
+The visible FAQ section (`src/components/Faq.jsx`) uses the same data, so the page and the schema always match.
+
+Before deploying, set `SITE_URL` to the live address (in your host's environment settings, or a `.env` file):
+
+```
+SITE_URL=https://your-domain.com
+```
+
+Without it, the canonical link, `og:url` and `sitemap.xml` are skipped. To get a large preview image when the link is shared, add a 1200×630 `public/og-image.png`.
